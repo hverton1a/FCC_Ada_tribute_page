@@ -1,13 +1,19 @@
 body{
-  background-color:#211522;
+  display:flex;
+  background-color:#291a2a;
+  padding-top:5vh;
 }
 
 #main{
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap:20px;
-  max-width:710px ;
+  max-width:1280px ;
+  width:90%;
   max-height: auto;
+  margin:auto auto auto auto;
+  background-color:#211522;
+  padding:20px 20px 20px 20px;
 }
 
 @media (max-width: 700px) {
@@ -16,9 +22,9 @@ body{
   }
 }
 
-@media (mix-width: 710px) {
+@media (min-width: 710px) {
   #title{
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
 }
 
@@ -28,27 +34,34 @@ body{
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  width:100%;
+  height:auto;
 }
 
 #img-wrapper{
-  border: 2px solid #46283f;
-  border-radius:1.25%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 0 2px 2px 2px solid #46283f;
+  border-radius:0 0 1.25% 1.25%;
   overflow:hidden;
 }
 
 img#image {
   display:block;
   width:100%;
-  max-width:340px ;
+  max-width:640px;
+  min-width:290px;
   height:auto;
-  max-height: 550px;
-  object-fit:contain; 
+  max-height: 80%;
+  object-fit:fill;
+  z-index: 1; 
 }
 
 p#img-caption, #title{
   color:rgb(135, 138, 122);
   width:100%;
-  z-index: 2;
+  z-index:2 ;
   font-size:10px;
   text-align: center;
   margin-top: 15px;
@@ -58,7 +71,7 @@ p#img-caption, #title{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  max-width:340px;
+  max-width:640px;
   margin:auto;
 }
 
@@ -68,19 +81,18 @@ p#img-caption, #title{
 
 #title{
   color:rgb(237, 240, 223);
-  font-size:25px;
   background-color: #613659;
   border: 2px solid #46283f;
   border-radius:5px 5px 0 0;
   border-bottom: none;
-  position:absolute;
-  top:0px;
   height:auto;
-  max-height:40px;
-  max-width:340px; 
+  max-height:8%;
+  max-width:640px; 
+  min-width:290px;
   text-align:center;
   padding:4px 0 4px 0;
-  margin-top:0px;
+  margin:0px;
+  font-size: calc(0.8em + 2.5vmin);
 }
 
 p#img-caption{
@@ -91,12 +103,12 @@ p#img-caption{
 }
 
 #tribute-info{
-
+  display:flex;
   color:#D3B1C2;
-  font-size:13px;
   font-family: "Helvetica Neue",serif;
   font-weight: 500;
   line-height: 1.05;
+  font-size: clamp(1rem, -0.875rem + 3.333333vw, 1.5rem);
 }
 
 #tribute-info blockquote{
@@ -116,13 +128,13 @@ p#img-caption{
 
 #sticker::first-letter{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
   color:blanchedalmond  ;
   font-weight: bold;
+  font-size: calc(0.8em + 2.5vmin);
 }
 
 
 #tribute-info #btn{
-  margin-top: 20px;
-text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
