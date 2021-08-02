@@ -1,0 +1,128 @@
+body{
+  background-color:#211522;
+}
+
+#main{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap:20px;
+  max-width:710px ;
+  max-height: auto;
+}
+
+@media (max-width: 700px) {
+  #main{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (mix-width: 710px) {
+  #title{
+    transform: translateY(50px);
+  }
+}
+
+#portrait {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+#img-wrapper{
+  border: 2px solid #46283f;
+  border-radius:1.25%;
+  overflow:hidden;
+}
+
+img#image {
+  display:block;
+  width:100%;
+  max-width:340px ;
+  height:auto;
+  max-height: 550px;
+  object-fit:contain; 
+}
+
+p#img-caption, #title{
+  color:rgb(135, 138, 122);
+  width:100%;
+  z-index: 2;
+  font-size:10px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#tribute-info>div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  max-width:340px;
+  margin:auto;
+}
+
+#tribute-info a,#img-caption a{
+  color:#D3B1C2;
+}
+
+#title{
+  color:rgb(237, 240, 223);
+  font-size:25px;
+  background-color: #613659;
+  border: 2px solid #46283f;
+  border-radius:5px 5px 0 0;
+  border-bottom: none;
+  position:absolute;
+  top:0px;
+  height:auto;
+  max-height:40px;
+  max-width:340px; 
+  text-align:center;
+  padding:4px 0 4px 0;
+  margin-top:0px;
+}
+
+p#img-caption{
+  height:5%;
+  left: 0;
+  bottom: 0;
+  font-weight: 700;
+}
+
+#tribute-info{
+
+  color:#D3B1C2;
+  font-size:13px;
+  font-family: "Helvetica Neue",serif;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+#tribute-info blockquote{
+  font-style: italic;
+  background-color: #351e30;
+  padding:5px 10px 5px 10px;
+  margin-top: 0;
+}
+
+#tribute-info p{
+  margin-top:0;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  text-indent: 25px;
+}
+
+#sticker::first-letter{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color:blanchedalmond  ;
+  font-weight: bold;
+}
+
+
+#tribute-info #btn{
+  margin-top: 20px;
+text-align: center;
+}
